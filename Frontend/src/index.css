@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #1a1a1a;
+  color: #e9ecef;
+}
+
+/* ---------- Navigation ---------- */
+.navbar {
+  background-color: #111;
+  border-bottom: 1px solid #2f2f2f;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 32px;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand span {
+  color: #e63946;
+}
+
+.nav-link {
+  color: #adb5bd;
+  text-decoration: none;
+  padding: 20px 18px;
+  font-size: 15px;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link.active {
+  color: #fff;
+  background-color: #e63946;
+}
+
+/* ---------- Mise en page ---------- */
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page-narrow {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: #868e96;
+  margin-bottom: 32px;
+}
+
+/* ---------- Bannière ---------- */
+.hero {
+  height: 420px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero h1 span {
+  color: #e63946;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ced4da;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* ---------- Cartes de cours ---------- */
+.class-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.class-card {
+  background-color: #242424;
+  border-left: 4px solid;
+  border-radius: 6px;
+  padding: 20px 24px;
+}
+
+.class-card.upcoming {
+  border-left-color: #4dabf7;
+}
+.class-card.past {
+  border-left-color: #868e96;
+}
+
+.class-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.class-card.upcoming h3 {
+  color: #4dabf7;
+}
+.class-card.past h3 {
+  color: #868e96;
+}
+
+.class-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px 24px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #ced4da;
+}
+
+.class-info strong {
+  color: #868e96;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.badge.upcoming {
+  background-color: #1c3d5a;
+  color: #4dabf7;
+}
+.badge.past {
+  background-color: #343a40;
+  color: #adb5bd;
+}
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-block;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-edit {
+  background-color: #4dabf7;
+  color: #111;
+  margin-right: 8px;
+}
+.btn-delete {
+  background-color: #e63946;
+  color: #fff;
+}
+.btn-submit {
+  width: 100%;
+  background-color: #e63946;
+  color: #fff;
+  padding: 13px;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* ---------- Formulaires ---------- */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  color: #868e96;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 11px 14px;
+  font-size: 15px;
+  background-color: #242424;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  color: #e9ecef;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #e63946;
+}
+
+.alert {
+  background-color: #3d1418;
+  border-left: 3px solid #e63946;
+  color: #ff8a90;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.empty-state {
+  color: #868e96;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* ---------- Page À propos ---------- */
+.about-section {
+  margin-bottom: 32px;
+}
+
+.about-section h2 {
+  font-size: 18px;
+  color: #e63946;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-section p {
+  line-height: 1.8;
+  color: #ced4da;
+}

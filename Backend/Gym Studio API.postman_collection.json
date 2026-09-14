@@ -1,0 +1,154 @@
+{
+  "info": {
+    "_postman_id": "d9ac786b-4ba4-4b00-ad32-7125b0bf5c52",
+    "name": "Gym Studio API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56355695",
+    "_collection_link": "https://go.postman.co/collection/56355695-d9ac786b-4ba4-4b00-ad32-7125b0bf5c52?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get all branches",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/branches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "branches"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get classes by branch",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/branches/1/classes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "branches",
+            "1",
+            "classes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get class by code",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/classes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "classes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add class",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"branch_code\": 1,\r\n  \"class_name\": \"Body Pump\",\r\n  \"start_time\": \"2026-11-05 18:00:00\",\r\n  \"end_time\": \"2026-11-05 19:00:00\",\r\n  \"instructor_name\": \"Sabrina\",\r\n  \"max_participants\": 20\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/classes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "classes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete class",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/classes/18",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "classes",
+            "18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update class",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"branch_code\": 1,\r\n  \"class_name\": \"Body Pump\",\r\n  \"start_time\": \"2026-11-05 18:00:00\",\r\n  \"end_time\": \"2026-11-05 19:00:00\",\r\n  \"instructor_name\": \"Sabrina\",\r\n  \"max_participants\": 20\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/classes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "classes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
